@@ -19,6 +19,7 @@ void random_li()
     mt19937 g(rd());
     shuffle(li.begin(), li.end(), g);
 }
+
 void line_list()
 {
     int a=0;
@@ -45,7 +46,6 @@ void line_list()
         }
     }
     cout << "\n\n\n";
-
 }
 
 void line_table()
@@ -69,8 +69,6 @@ void line_table()
         }
     }
 }
-
-
 
 int main()
 {
@@ -99,7 +97,6 @@ int main()
             cout<<"You can't choose a full house !!!!!\n\n";
             goto lable;
         }
-
 
         star[num1-1]=li[num1-1];
         star[num2-1]=li[num2-1];
