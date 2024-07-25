@@ -3,6 +3,7 @@
 #include <random>
 #include <vector>
 #include <unistd.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -45,19 +46,6 @@ void line_list()
     }
     cout << "\n\n\n";
 
-
-//    for(int i=0; i<16; i++)
-//    {
-//        cout<<i+1<<" = "<<li[i]<<endl;
-//    }
-//
-//    cout << "\n\n\n";
-//    for(int i=0; i<16; i++)
-//    {
-//        cout<<i+1<<" = "<<star[i]<<endl;
-//    }
-//
-//    cout << endl;
 }
 
 void line_table()
@@ -106,6 +94,12 @@ int main()
             cout<<"This house is full !!!!!\n\n";
             goto lable;
         }
+        if(star[num1-1] !='*' || star[num2-1] !='*')
+        {
+            cout<<"You can't choose a full house !!!!!\n\n";
+            goto lable;
+        }
+
 
         star[num1-1]=li[num1-1];
         star[num2-1]=li[num2-1];
@@ -122,11 +116,12 @@ int main()
             cout << "\n\nSleeping for 5 seconds...\n";
             sleep(5);
             cout << "Done sleeping!\n";
+            system("clear");
 
             star[num1-1] = '*' ;
             star[num2-1] = '*' ;
+            line_list();
         }
-
 
         int c = 0;
 
